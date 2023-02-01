@@ -1,0 +1,151 @@
+<div class="container-fluid">
+    <app-pagetitle
+      title="Users"
+      [breadcrumbItems]="breadCrumbItems"
+    ></app-pagetitle>
+  
+    <!-- list user -->
+    <div class="row" *ngIf="!isOpenForm">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-title">
+              Daftar User
+              <div class="float-right">
+                <button
+                  class="btn btn-sm btn-outline-primary"
+                  (click)="createUser()"
+                >
+                  <i class="fa fa-plus"></i>
+                  Tambah User
+                </button>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-12">
+                <div class="table-responsive">
+                  <table
+                    datatable
+                    [dtOptions]="dtOptions"
+                    class="table table-condensed dt-responsive nowrap datatables no-footer dtr-inline"
+                  >
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Username</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Awin Rahma Zulvia</td>
+                        <td>awinrahma</td>
+                        <td class="text-right">
+                          <div
+                            class="btn-group btn-group-toggle"
+                            data-toggle="buttons"
+                          >
+                            <button
+                              class="btn btn-sm btn-outline-warning"
+                              ngbTooltip="Restore"
+                            >
+                              <i class="fas fa-recycle"></i>
+                            </button>
+                            <button
+                              class="btn btn-sm btn-outline-warning"
+                              ngbTooltip="Edit"
+                            >
+                              <i class="fas fa-pencil-alt"></i>
+                            </button>
+                            <button
+                              class="btn btn-sm btn-outline-danger"
+                              ngbTooltip="Delete"
+                            >
+                              <i class="fa fa-trash"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Awin Rahma Zulvia</td>
+                        <td>awinrahma</td>
+                        <td class="text-right">
+                          <div
+                            class="btn-group btn-group-toggle"
+                            data-toggle="buttons"
+                          >
+                            <button
+                              class="btn btn-sm btn-outline-warning"
+                              ngbTooltip="Restore"
+                            >
+                              <i class="fas fa-recycle"></i>
+                            </button>
+                            <button
+                              class="btn btn-sm btn-outline-warning"
+                              ngbTooltip="Edit"
+                            >
+                              <i class="fas fa-pencil-alt"></i>
+                            </button>
+                            <button
+                              class="btn btn-sm btn-outline-danger"
+                              ngbTooltip="Delete"
+                            >
+                              <i class="fa fa-trash"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Awin Rahma Zulvia</td>
+                        <td>awinrahma</td>
+                        <td class="text-right">
+                          <div
+                            class="btn-group btn-group-toggle"
+                            data-toggle="buttons"
+                          >
+                            <button
+                              class="btn btn-sm btn-outline-warning"
+                              ngbTooltip="Restore"
+                            >
+                              <i class="fas fa-recycle"></i>
+                            </button>
+                            <button
+                              class="btn btn-sm btn-outline-warning"
+                              ngbTooltip="Edit"
+                            >
+                              <i class="fas fa-pencil-alt"></i>
+                            </button>
+                            <button
+                              class="btn btn-sm btn-outline-danger"
+                              ngbTooltip="Delete"
+                            >
+                              <i class="fa fa-trash"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- list user - end -->
+  
+    <!-- Form -->
+    <div class="row" *ngIf="isOpenForm">
+      <div class="col-12">
+        <app-form-user (afterSave)="showForm(false)"></app-form-user>
+      </div>
+    </div>
+    <!-- Form - end -->
+  </div>
+  
