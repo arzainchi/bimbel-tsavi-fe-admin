@@ -25,7 +25,11 @@
           <div class="row">
             <div class="col-12">
               <div class="table-responsive">
-                <table class="table table-condensed dt-responsive nowrap datatables no-footer dtr-inline">
+                <table
+                  datatable
+                  [dtOptions]="dtOptions"
+                  class="table table-condensed dt-responsive nowrap datatables no-footer dtr-inline"
+                >
                   <thead>
                     <tr>
                       <th>No</th>
@@ -35,7 +39,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td style="width: 5%;">1</td>
+                      <td style="width: 5%">1</td>
                       <td>Awin Rahma Zulvia</td>
                       <td class="text-right">
                         <div class="btn-group">
